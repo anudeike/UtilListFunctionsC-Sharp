@@ -12,40 +12,16 @@ namespace Util
     // class UList -> is a utility List, like a regular list but with extra functions
     public class UList<T> : System.Collections.Generic.List<T>
     {
-        
-        // how to access members of the list
-        public void Print(string method = "standard", string separator = ",")
+        public UList()
         {
-            switch (method)
-            {
-                case "standard":
-                    int count = 0;
-
-                    Console.Write("[");
-                    while (count < this.Count)
-                    {
-                        Console.Write(this[count]);
-
-                        if (count == (this.Count - 1))
-                            break;
-
-                        Console.Write(separator + " ");
-                        
-                        count++;
-                    }
-                    
-                    Console.WriteLine("]");
-                    break;
-                
-                case "newline":
-                    foreach (var elem in this)
-                    {
-                        Console.WriteLine(elem);
-                    }
-                    break;
-            }
+            // empty
         }
-        
+
+        private UList(T[] arr)
+        {
+            this.AddRange(arr);
+        }
+
         // toString
         public override string ToString()
         {
@@ -72,6 +48,7 @@ namespace Util
             return sb.ToString();
         }
         
+        // toString (custom separtor)
         public string ToString(string separator)
         {
             // overriding to allow for better visualization of contents
@@ -96,6 +73,30 @@ namespace Util
             
             return sb.ToString();
         }
+        
+        // === SINGLE LIST UTIL FUNCTIONS
+        /// <summary>
+        /// Gets a slice given the start and end index. Excludes the value of the end index.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="start"> start index of the slice</param>
+        /// <param name="end"> end index of the slice (exclusive) </param>
+        /// <returns> Desired slice of the original list. Shallow copy.</returns>
+        public UList<T> GetSlice(int start, int end)
+        {
+            if(this.Count == 0)
+            {
+                throw new System.ArgumentException("List cannot be empty.");
+            }
+
+            if(end - start < 0)
+            {
+                throw new System.ArgumentException("End Index cannot be less than start index");
+            }
+            
+            // logic
+            return new UList<T>(this.GetRange(start, end - start).ToArray());
+        }
     }
     
     class ExtendedListFunctions
@@ -108,7 +109,7 @@ namespace Util
         /// <param name="start_index"> start index of the slice</param>
         /// <param name="end_index"> end index of the slice (exclusive) </param>
         /// <returns> Desired slice of the original list. Shallow copy.</returns>
-        public static List<T> GetSlice<T>(List<T> list, int start_index, int end_index)
+        public static IEnumerable<T> GetSlice<T>(List<T> list, int start_index, int end_index)
         {
             if(list.Count == 0)
             {
@@ -139,8 +140,11 @@ namespace ListUtilityFunctions
             //
             // List<int> slice = GetSlice(example, 4, 7);
 
-            var utilList = new UList<int> {1, 2, 3, 5};
+            var utilList = new UList<int> {1, 2, 3, 5, 43, 42, 6 ,88, 886, 864};
             Console.WriteLine(utilList);
+
+            var uSlice = utilList.GetSlice(2, 5);
+            Console.WriteLine(uSlice);
 
             Console.WriteLine("Program Success.");
         }
