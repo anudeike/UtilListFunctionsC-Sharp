@@ -19,11 +19,24 @@ namespace Util
             switch (method)
             {
                 case "standard":
-                    foreach (var elem in this)
+                    int count = 0;
+
+                    Console.Write("[");
+                    while (count < this.Count)
                     {
+                        Console.Write(this[count]);
+
+                        if (count == (this.Count - 1))
+                            break;
+
+                        Console.Write(separator + " ");
                         
+                        count++;
                     }
+                    
+                    Console.WriteLine("]");
                     break;
+                
                 case "newline":
                     foreach (var elem in this)
                     {
@@ -33,6 +46,56 @@ namespace Util
             }
         }
         
+        // toString
+        public override string ToString()
+        {
+            // overriding to allow for better visualization of contents
+            var sb = new System.Text.StringBuilder();
+            int count = 0;
+
+            sb.Append("[");
+            
+            while (count < this.Count)
+            {
+                sb.Append(this[count]);
+
+                if (count == (this.Count - 1))
+                    break;
+
+                sb.Append(", ");
+                        
+                count++;
+            }
+                    
+            sb.Append("]");
+            
+            return sb.ToString();
+        }
+        
+        public string ToString(string separator)
+        {
+            // overriding to allow for better visualization of contents
+            var sb = new System.Text.StringBuilder();
+            int count = 0;
+
+            sb.Append("[");
+            
+            while (count < this.Count)
+            {
+                sb.Append(this[count]);
+
+                if (count == (this.Count - 1))
+                    break;
+
+                sb.Append(separator + " ");
+                        
+                count++;
+            }
+                    
+            sb.Append("]");
+            
+            return sb.ToString();
+        }
     }
     
     class ExtendedListFunctions
@@ -77,7 +140,7 @@ namespace ListUtilityFunctions
             // List<int> slice = GetSlice(example, 4, 7);
 
             var utilList = new UList<int> {1, 2, 3, 5};
-            utilList.Print();
+            Console.WriteLine(utilList);
 
             Console.WriteLine("Program Success.");
         }
