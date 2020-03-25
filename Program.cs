@@ -22,6 +22,7 @@ namespace Util
         // delegates
         public delegate bool DropFilterFunction(T x);
         
+
         public UList()
         {
             // empty
@@ -32,7 +33,7 @@ namespace Util
             // takes an array and adds it to the list
             this.AddRange(arr);
         }
-
+        
         // toString
         public override string ToString()
         {
@@ -152,6 +153,18 @@ namespace Util
             }
 
             return GetSlice(inPoint);
+        }
+
+        public UList<T> Drop(int numElementsToBeDropped)
+        {
+            // drops from the left
+            return GetSlice(numElementsToBeDropped - 1);
+        }
+
+        public UList<T> DropRight(int numElementsToBeDropped)
+        {
+            // drops from the right
+            return GetSlice(0, this.Count - numElementsToBeDropped);
         }
         
         
