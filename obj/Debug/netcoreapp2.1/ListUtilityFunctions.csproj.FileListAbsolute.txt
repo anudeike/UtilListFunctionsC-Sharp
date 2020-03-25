@@ -1,0 +1,11 @@
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\bin\Debug\netcoreapp2.1\ListUtilityFunctions.deps.json
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\bin\Debug\netcoreapp2.1\ListUtilityFunctions.runtimeconfig.json
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\bin\Debug\netcoreapp2.1\ListUtilityFunctions.runtimeconfig.dev.json
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\bin\Debug\netcoreapp2.1\ListUtilityFunctions.dll
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\bin\Debug\netcoreapp2.1\ListUtilityFunctions.pdb
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\obj\Debug\netcoreapp2.1\ListUtilityFunctions.csprojAssemblyReference.cache
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\obj\Debug\netcoreapp2.1\ListUtilityFunctions.csproj.CoreCompileInputs.cache
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\obj\Debug\netcoreapp2.1\ListUtilityFunctions.AssemblyInfoInputs.cache
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\obj\Debug\netcoreapp2.1\ListUtilityFunctions.AssemblyInfo.cs
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\obj\Debug\netcoreapp2.1\ListUtilityFunctions.dll
+C:\Users\Ikechukwu Anude\RiderProjects\ListUtilityFunctions\obj\Debug\netcoreapp2.1\ListUtilityFunctions.pdb
