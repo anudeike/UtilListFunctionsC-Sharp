@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Util;
-using static Util.ExtendedListFunctions;
 
 
 namespace Util
@@ -99,33 +98,6 @@ namespace Util
         }
     }
     
-    class ExtendedListFunctions
-    {
-        /// <summary>
-        /// Gets a slice given the start and end index. Excludes the value of the end index.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="list"> target list </param>
-        /// <param name="start_index"> start index of the slice</param>
-        /// <param name="end_index"> end index of the slice (exclusive) </param>
-        /// <returns> Desired slice of the original list. Shallow copy.</returns>
-        public static IEnumerable<T> GetSlice<T>(List<T> list, int start_index, int end_index)
-        {
-            if(list.Count == 0)
-            {
-                throw new System.ArgumentException("List cannot be empty.");
-            }
-
-            if(end_index - start_index < 0)
-            {
-                throw new System.ArgumentException("End Index cannot be less than start index");
-            }
-
-            
-            return list.GetRange(start_index, end_index - start_index);
-        }
-        
-    }
 }
 
 namespace ListUtilityFunctions
