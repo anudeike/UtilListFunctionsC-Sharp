@@ -3,31 +3,35 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Util;
 
 
 namespace Util
 {
     // class UList -> is a utility List, like a regular list but with extra functions
-    public class UList<T> : System.Collections.Generic.List<T>
+    public class UList<T> : List<T>
     {
         /*
          * Functions I'd Like to Implement
          * - drop -> drops n elements from an array
          * - DropWhileTrue -> drops until the predicate (function) returns false
          * - DropWhileFalse -> drops until the predicate returns true
+         * - GetNext
          */
         
         // delegates
         public delegate bool DropFilterFunction(T x);
         
+        // global variables within the class
+        private int pos = -1;
 
+        // Empty Constructor
         public UList()
         {
-            // empty
+            
         }
-
+        
+        // Array Constructor
         private UList(T[] arr)
         {
             // takes an array and adds it to the list
@@ -122,6 +126,31 @@ namespace Util
             return new UList<T>(this.GetRange(start, this.Count - start).ToArray());
         }
         
+        // GetNext - Gets the next element in a List and Remembers where you left off
+        public T GetNext(bool wrap = true)
+        {
+            // must increment the pos to get first element
+            this.pos++;
+            
+            // get the element at that position
+            if (this.pos > this.Count)
+            {
+                if (!wrap)
+                {
+                    // if the wrap flag is not set
+                    throw new IndexOutOfRangeException("Have Reached the end of the list.\nTo avoid this, set wrap to true.");
+                }
+                else
+                {
+                    // just reset the pos to zero
+                    this.pos = 0;
+                }
+                
+            }
+            
+            // return the value at that position
+            return this[pos];
+        }
         /// <summary>
         /// Creates a slice of array excluding elements dropped from the beginning. Elements are dropped until predicate returns false. 
         /// </summary>
@@ -168,6 +197,16 @@ namespace Util
         }
         
         
+        
+        // Interactions between two lists.
+        
+        // Find Unique Values in a list
+        public UList<T> FindUnique()
+        {
+            return new UList<T>();
+        }
+        
+        
     }
     
 }
@@ -179,25 +218,31 @@ namespace ListUtilityFunctions
     {
         static void Main(string[] args)
         {
-            // // get a slice of a List
-            // List<int> example = new List<int>{4, 5, 2, 5, 1, 6, 7};
-            //
-            // List<int> slice = GetSlice(example, 4, 7);
+            // get a slice of a List
 
             var utilList = new UList<int> {1, 2, 3, 5, 43, 42, 6 ,88, 886, 864};
             Console.WriteLine("Original Util List: ");
             Console.WriteLine(utilList);
-
-            var uSlice = utilList.GetSlice(2, 5);
-            Console.WriteLine("\nSlice from [2-5]: " + uSlice);
+            //
+            // var uSlice = utilList.GetSlice(2, 5);
+            // Console.WriteLine("\nSlice from [2-5]: " + uSlice);
+            //
+            // // testing the drop while true
+            // var allFive = new UList<int>{5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 4, 6};
+            // Console.WriteLine("\nOriginal Util List: " + allFive);
+            //
+            // // enter a lambda function 
+            // var noFives = allFive.DropWhileTrue(f => f == 5);
+            // Console.WriteLine("Filtered out 5's: " + noFives);
             
-            // testing the drop while true
-            var allFive = new UList<int>{5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 4, 6};
-            Console.WriteLine("\nOriginal Util List: " + allFive);
-            
-            var noFives = allFive.DropWhileTrue(f => f == 5);
-            Console.WriteLine("Filtered out 5's: " + noFives);
+            // call the get next. 
+            Console.WriteLine(utilList.GetNext());
+            Console.WriteLine(utilList.GetNext());
+            utilList.GetNext();
+            Console.WriteLine(utilList.GetNext());
 
+            // make sure that the foreach still works
+            Console.WriteLine(utilList);
             Console.WriteLine("Program Success.");
         }
     }
