@@ -209,6 +209,17 @@ namespace Util
         
     }
     
+    // class UDict -> is a utility dictionary, like a regular dictionary but with extra functions for ease of use
+    public class UDIct<T> : Dictionary<T, T>
+    {
+        /*
+         * Functions I'd like to implement:
+         * get()
+         * items()
+         * in()
+         */
+    }
+    
 }
 
 namespace ListUtilityFunctions
@@ -223,18 +234,7 @@ namespace ListUtilityFunctions
             var utilList = new UList<int> {1, 2, 3, 5, 43, 42, 6 ,88, 886, 864};
             Console.WriteLine("Original Util List: ");
             Console.WriteLine(utilList);
-            //
-            // var uSlice = utilList.GetSlice(2, 5);
-            // Console.WriteLine("\nSlice from [2-5]: " + uSlice);
-            //
-            // // testing the drop while true
-            // var allFive = new UList<int>{5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 4, 6};
-            // Console.WriteLine("\nOriginal Util List: " + allFive);
-            //
-            // // enter a lambda function 
-            // var noFives = allFive.DropWhileTrue(f => f == 5);
-            // Console.WriteLine("Filtered out 5's: " + noFives);
-            
+
             // call the get next. 
             Console.WriteLine(utilList.GetNext());
             Console.WriteLine(utilList.GetNext());

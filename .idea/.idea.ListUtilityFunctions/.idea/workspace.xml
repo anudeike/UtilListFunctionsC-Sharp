@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f5d53a5-1336-4129-b56b-32cc414133c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ListUtilityFunctions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ListUtilityFunctions/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/ListUtilityFunctions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/ListUtilityFunctions.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/ListUtilityFunctions.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.1/ListUtilityFunctions.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/ListUtilityFunctions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/ListUtilityFunctions.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/ListUtilityFunctions.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp2.1/ListUtilityFunctions.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +66,7 @@
       <workItem from="1585116810003" duration="15994000" />
       <workItem from="1585368158197" duration="600000" />
       <workItem from="1585610536800" duration="434000" />
-      <workItem from="1585794065193" duration="3176000" />
+      <workItem from="1585794065193" duration="3890000" />
     </task>
     <servers />
   </component>
@@ -81,22 +76,22 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="WindowStateProjectService">
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1585797586013">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1585933401563">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585797586013" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1585797586012">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585933401563" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1585933401562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585797586012" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1585797586012">
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585933401562" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1585933401562">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585797586012" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1585797586012">
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585933401562" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1585933401563">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585797586012" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585933401563" />
     <state x="72" y="255" key="Rider.ProjectTemplateDialog.Size" timestamp="1585116808807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
